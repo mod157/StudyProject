@@ -5,4 +5,4 @@
 3. 세번째
 2. 두번째
 ```
-Link: [Google](https://google.com, "google link")
+[Google](https://google.com, "google link")
