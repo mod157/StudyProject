@@ -11,7 +11,7 @@ public class Hw1_2 {
 		
 		String word;
 		Scanner scan = new Scanner(System.in);
-		System.out.print("아무 말이나 좀 해봐 : ");
+		System.out.print("say something : ");
 		word = scan.nextLine();
 
 		Reverse re = new Reverse(word);
