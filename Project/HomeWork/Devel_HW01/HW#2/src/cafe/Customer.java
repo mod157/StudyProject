@@ -13,62 +13,63 @@ public class Customer {
 	private static int money = 0;
 	private int recharge = 0;
 		
-	//customer »ı¼ºÇÏ¸é µ·Àº ¸¸¿øÀÖ´Â »óÅÂ
+	//customer ìƒì„±í•˜ë©´ ëˆì€ ë§Œì›ìˆëŠ” ìƒíƒœ
 	public Customer() {
 		
 		money = 10000;
 	}
 	
-	//°í°´ÀÌ ÁÖ¹®À» ÇÏµç ±×³É ³ª°¡µç ¸ÕÀú ÀÏ´Ü ¹º°¡ ¾×¼ÇÀ» ÃëÇÏ°ÚÁö~!?!!
+	//ê³ ê°ì´ ì£¼ë¬¸ì„ í•˜ë“  ê·¸ëƒ¥ ë‚˜ê°€ë“  ë¨¼ì € ì¼ë‹¨ ë­”ê°€ ì•¡ì…˜ì„ ì·¨í•˜ê² ì§€~!?!!
 	public void doaction() {
 				
 		while(true) {
 			
 			if(money<0) {
-				System.out.println("ÇÊ¿äÇÑ ±İ¾× : "+ (-money));
-				System.out.println("µ·ÀÌ ¸ğÀÚ¸£´Ù °í°´¾Æ µ· »Ì¾Æ¿Í~!");
+				System.out.println("í•„ìš”í•œ ê¸ˆì•¡ : "+ (-money));
+				System.out.println("ëˆì´ ëª¨ìë¥´ë‹¤ ê³ ê°ì•„ ëˆ ë½‘ì•„ì™€~!");
 				
-				//µ· »Ì´Â Å¬·¡½º µû·Î ¸¸µé¸é ÁÁ°ÙÁö¸¸ ±ÍÂú¾Æ¼­ ¿©±â±îÁö ³¡
-				System.out.println("ÃæÀüÇÑ´Ù(1), ¾ÈÇÑ´Ù(2) ¼±ÅÃÇØ ±âÈ¸¸¦ ÁØ´Ù ³»°¡");
+				//ëˆ ë½‘ëŠ” í´ë˜ìŠ¤ ë”°ë¡œ ë§Œë“¤ë©´ ì¢‹ê²Ÿì§€ë§Œ ê·€ì°®ì•„ì„œ ì—¬ê¸°ê¹Œì§€ ë
+				System.out.println("ì¶©ì „í•œë‹¤(1), ì•ˆí•œë‹¤(2) ì„ íƒí•´ ê¸°íšŒë¥¼ ì¤€ë‹¤ ë‚´ê°€");
 				recharge = scan.nextInt();
 				if(recharge == 1) {
-					//ÃæÀüÇÏ·¯ °í°í
-					System.out.println("¾ó¸¶ÇÒ²«´ë? ");
+					//ì¶©ì „í•˜ëŸ¬ ê³ ê³ 
+					System.out.println("ì–¼ë§ˆí• ê»€ëŒ€? ");
 					recharge = scan.nextInt();
 					money += recharge;
 				}
 				else {
-					System.out.println("ÃæÀüµµ ¾ÈÇÏ°í µ·µµ ¾øÀ¸¸é¼­ ¹» »ì¶ó±¸ÇØ ³ª°¡±×³É ³¡ ¾ÈÆÈ¾Æ");
+					System.out.println("ì¶©ì „ë„ ì•ˆí•˜ê³  ëˆë„ ì—†ìœ¼ë©´ì„œ ë­˜ ì‚´ë¼êµ¬í•´ ë‚˜ê°€ê·¸ëƒ¥ ë ì•ˆíŒ”ì•„");
 					break;
 				}
 			}
 			
-			System.out.println("°í°´ÀÌ °¡Áø µ·Àº "+ money + " ¿ø ÀÔ´Ï´Ù.");
+			System.out.println("ê³ ê°ì´ ê°€ì§„ ëˆì€ "+ money + " ì› ì…ë‹ˆë‹¤.");
 			
 			System.out.println("\n1choose what you will do~!");
 			System.out.print("1. Order 2. Exit            ");
 			doact = scan.nextInt();
 			
-			//ÁÖ¹®À» ÇÏ°Ú´Ù°í ÇÑ´Ù.
+			//ì£¼ë¬¸ì„ í•˜ê² ë‹¤ê³  í•œë‹¤.
 			if(doact == 1) {
 				
-				//¸Ş´ºÆÇÀ» ¸ÕÀú º¸¿©ÁØ´Ù.
+				//ë©”ë‰´íŒì„ ë¨¼ì € ë³´ì—¬ì¤€ë‹¤.
 				co.showmenu();
-				//¹Ù¸®½ºÅ¸°¡ ÀÌÁ¦ ÁÖ¹®À» ¹Ş´Â´Ù °í°í!!
+				//ë°”ë¦¬ìŠ¤íƒ€ê°€ ì´ì œ ì£¼ë¬¸ì„ ë°›ëŠ”ë‹¤ ê³ ê³ !!
 				ba.detailorder();
 			}
 			
-			//±×³É ³ª°¡°Ú´Ù°í ÇÑ´Ù.
+			//ê·¸ëƒ¥ ë‚˜ê°€ê² ë‹¤ê³  í•œë‹¤.
 			else if(doact == 2) {
 				
 				System.out.println("\nGooooooooooood Byyyyyyyeeeeeeeeeee~~!!!!");
 				break;				
 			}
 			
-			//µı ¼Ò¸®¸¦ ÇÑ´Ù ÀÌ·± ¸Û«ŠÀÌ!!!!!!!!!!
+			//ë”´ ì†Œë¦¬ë¥¼ í•œë‹¤ ì´ëŸ° ë©ì³¥ì´!!!!!!!!!!
 			else {
 				
 				System.out.println("\nwrong input.. choose again!!!");
+				doaction();
 			}
 			
 			int number = ba.editprice;
