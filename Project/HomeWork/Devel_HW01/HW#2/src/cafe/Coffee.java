@@ -7,7 +7,27 @@ public class Coffee {
 	Cappuccino cp = new Cappuccino();
 	CaramelMacchiato cm = new CaramelMacchiato();
 	
-	//¸Ş´ºÆÇ º¸¿©ÁÖ´Â °ÅÀÌÀÌÀÌÀÌ¤ÓÀÓ
+	//ì»¤í”¼ ì¢…ë¥˜ì— ë”°ë¥¸ ê°€ê²© í™•ì¸í•˜ê¸°
+	public int coffeekind(String drinks) {
+			
+		int price = 0;
+			
+		if(drinks.equals("Americano")) {
+			price = am.getprice();
+		}
+		else if(drinks.equals("Espresso")) {
+			price = es.getprice();
+		}
+		else if(drinks.equals("Cappuccino")) {
+			price = cp.getprice();
+		}
+		else if(drinks.equals("CaramelMacchiato")) {
+			price = cm.getprice();
+		}
+		return price;
+	}
+	
+	//ë©”ë‰´íŒ ë³´ì—¬ì£¼ëŠ” ê±°ì´ì´ì´ì´ã…£ì„
 	public void showmenu() {
 		
 		System.out.print("\n********************************\n");
