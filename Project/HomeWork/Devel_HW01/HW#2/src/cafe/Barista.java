@@ -7,7 +7,7 @@ public class Barista {
 	
 	Scanner scan = new Scanner(System.in);
 	
-	//Å¬·¡½ºµé ¾µ¶ó¸é ¹¹ ´Ù ¼º¾ğ¾Ö Áà¾ßÁö¹¹....
+	//í´ë˜ìŠ¤ë“¤ ì“¸ë¼ë©´ ë­ ë‹¤ ì„±ì–¸ì•  ì¤˜ì•¼ì§€ë­....
 	Coffee co = new Coffee();
 	Americano am = new Americano();
 	Espresso es = new Espresso();
@@ -24,7 +24,7 @@ public class Barista {
 	
 	public Barista() { }
 	
-	//ÁÖ¹®À» ½ÃÀÛÇÕ´Ï´Ù~~
+	//ì£¼ë¬¸ì„ ì‹œì‘í•©ë‹ˆë‹¤~~
 	public void detailorder() {
 		
 		editprice = 0;
@@ -41,45 +41,45 @@ public class Barista {
 		prices = new int[order]; 
 		
 		if(order == 1)
-			singleorder(); //´ÜÇ°ÁÖ¹®À¸·Î °í°í
+			singleorder(); //ë‹¨í’ˆì£¼ë¬¸ìœ¼ë¡œ ê³ ê³ 
 		else
-			pluralorder(); //¸¹ÀÌ ÁÖ¹®ÇÏ´Â °÷À¸·Î °í°í
+			pluralorder(); //ë§ì´ ì£¼ë¬¸í•˜ëŠ” ê³³ìœ¼ë¡œ ê³ ê³ 
 	}
 	
-	//´ÜÇ° ÁÖ¹®ÇÒ ‹š
+	//ë‹¨í’ˆ ì£¼ë¬¸í•  ë–„
 	public void singleorder() {
 		
-		//Ä¿ÇÇÀÇ Á¾·ù¸¦ ¸ÕÀú ¹°¾îº¸°í
+		//ì»¤í”¼ì˜ ì¢…ë¥˜ë¥¼ ë¨¼ì € ë¬¼ì–´ë³´ê³ 
 		System.out.println("what do you want to drink?");
 		drinks[0] = scan.next();
 		
-		//Ä¿ÇÇ Á¾·ù¿¡ ¸Â´Â °¡°İÀ» °¡Á®¿À°í
-		prices[0] = coffeekind(drinks[0]);
+		//ì»¤í”¼ ì¢…ë¥˜ì— ë§ëŠ” ê°€ê²©ì„ ê°€ì ¸ì˜¤ê³ 
+		prices[0] = co.coffeekind(drinks[0]);
 		
-		//ÁÖ¹®ÇÑ Ä¿ÇÇÀÇ »çÀÌÁî¸¦ ¹°¾îº¸°í
+		//ì£¼ë¬¸í•œ ì»¤í”¼ì˜ ì‚¬ì´ì¦ˆë¥¼ ë¬¼ì–´ë³´ê³ 
 		System.out.println("choose the size of the drink( S(-500) / M / L(+500) )");
 		sizes[0] = scan.next();
 		
-		//»çÀÌÁî°¡ ÀÛÀº°Å¸é -500¿ø ÇØÁÖ´Â °Å¾ß
+		//ì‚¬ì´ì¦ˆê°€ ì‘ì€ê±°ë©´ -500ì› í•´ì£¼ëŠ” ê±°ì•¼
 		if(sizes[0].equals("S") || sizes[0].equals("s")) {
 			prices[0] += -500;
 		}
-		//»çÀÌÁî°¡ Å« °Å¸é ÀÌÀÚ½Ä ¸¹ÀÌ ¸Ô´Âµ¥ +500 Ãß°¡!!!!!!!
+		//ì‚¬ì´ì¦ˆê°€ í° ê±°ë©´ ì´ìì‹ ë§ì´ ë¨¹ëŠ”ë° +500 ì¶”ê°€!!!!!!!
 		else if(sizes[0].equals("L") || sizes[0].equals("l")) {
 			prices[0] += +500;
 		}
-		//º¯µ¿µÈ °¡°İÀ» ¸í½ÃÇØ ÁÖ°í
+		//ë³€ë™ëœ ê°€ê²©ì„ ëª…ì‹œí•´ ì£¼ê³ 
 		editprice += prices[0];
 		
-		//ÁÖ¹®ÇÑ À½·á µû¶æÇÏ°Ô ¸ÔÀ»°Å³Ä Â÷°©°Ô ¸ÔÀ»°Å³Ä ¹°¾îº½
+		//ì£¼ë¬¸í•œ ìŒë£Œ ë”°ëœ»í•˜ê²Œ ë¨¹ì„ê±°ëƒ ì°¨ê°‘ê²Œ ë¨¹ì„ê±°ëƒ ë¬¼ì–´ë´„
 		System.out.println("choose the temperature of the drink(HOT, COLD)");
 		tempers[0] = scan.next();
 		
-		//ÁÖ¹® ³¡ ÀÌÁ¦ ÁÖ·¯°¡
+		//ì£¼ë¬¸ ë ì´ì œ ì£¼ëŸ¬ê°€
 		endorder(editprice);
 	}
 		
-	//¿©·¯°³ ÁÖ¹® ÇÒ ‹š
+	//ì—¬ëŸ¬ê°œ ì£¼ë¬¸ í•  ë–„
 	public void pluralorder() {
 		
 		System.out.println("input what you want to drink");
@@ -96,7 +96,7 @@ public class Barista {
 			sizes[i] = token.nextToken(",");
 			tempers[i] = token.nextToken(",");			
 			
-			prices[i] = coffeekind(drinks[i]);
+			prices[i] = co.coffeekind(drinks[i]);
 			
 			if(sizes[i].equals("S") || sizes[i].equals("s")) {
 				prices[i] += -500;
@@ -110,34 +110,14 @@ public class Barista {
 		endorder(editprice);
 	}
 	
-	//Ä¿ÇÇ Á¾·ù¿¡ µû¸¥ °¡°İ È®ÀÎÇÏ±â
-	public int coffeekind(String drinks) {
-		
-		int price = 0;
-		
-		if(drinks.equals("Americano")) {
-			price = am.getprice();
-		}
-		else if(drinks.equals("Espresso")) {
-			price = es.getprice();
-		}
-		else if(drinks.equals("Cappuccino")) {
-			price = cp.getprice();
-		}
-		else if(drinks.equals("CaramelMacchiato")) {
-			price = cm.getprice();
-		}
-		return price;
-	}
-	
-	//Ä¿ÇÇ ³»¾îÁÖ±â ¿ï¶ö¤©¶ó¶ó¤¿¤¿¤¿~~
+	//ì»¤í”¼ ë‚´ì–´ì£¼ê¸° ìš¸ë„ã„¹ë¼ë¼ã…ã…ã…~~
 	public void endorder(int num) {
 		
 		for(int i=0; i<order; i++) {
 			System.out.printf("Here is your %5s %3s %17s...%6s\n",tempers[i],sizes[i],drinks[i],prices[i]);
 		}
 		
-		System.out.println("ÃÑ ±İ¾×Àº ..........."+editprice+" ¿ø ÀÔ´Ï´Ù.");
+		System.out.println("ì´ ê¸ˆì•¡ì€ ..........."+editprice+" ì› ì…ë‹ˆë‹¤.");
 		
 		//Customer(editprice);
 	}
