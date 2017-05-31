@@ -1,4 +1,5 @@
 # 아무 글이나 적어보세요2
+<<<<<<< HEAD
 안녀ㅕㅕㅕㅕㅕㅕㅕㅕㅕㅕㅕㅕ
 =========================
 
@@ -51,3 +52,58 @@
 ~~ee~~
 [BAAAAAAAM](http://www.naver.com"ggggggggggg")
 ![컴피털](http://nv2.tveta.naver.net/libs/1159/1159195/20170324160838-1F7YvsUB.jpg)
+=======
+<<<<<<< HEAD
+개발
+
+gsgsdgsdgdsgsdfdsg개발
+=====
+개발
+=====
+# 개발
+## 개발
+-----
+### 새발
+-----
+> this
+>> ##
+'''
+## sdfsdf
+'''
+>> #
+
+1.
+1.
+1.
+1.
+1.
+* * * * 
+
+* *  * *
+1.
+    
+1.
+1.
+
+*
+-
++
+r+r 
+<www.naver.com> 
+
+**문자**
+***문자*** 
+
+Link:[google](www.naver.com "go naver")  
+
+![스테이크](http://cfile6.uf.tistory.com/image/2730134C528E1C0C1E845B)
+=======
+
+```
+1. 첫번째
+3. 세번째
+2. 두번째
+```
+[Google](https://google.com, "google link")
+>>>>>>> 31480bbfe52095c2a000ad7566b8bd2210052f61
+>>>>>>> 37d71392de4e8d74fa4b71be03f40d760a3c254f
